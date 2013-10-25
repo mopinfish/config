@@ -7,3 +7,6 @@
 	diff = always
 	interactive = always
 	status = always
+[user]
+	name = otsukano
+	mail = OtsukaNoboru@next-group.jp

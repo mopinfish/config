@@ -5,7 +5,7 @@ set ttytype=builtin_linux
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/vundle.git/
+set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 Bundle 'unite.vim'
