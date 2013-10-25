@@ -123,8 +123,8 @@ highlight MatchParen guifg=Yellow guibg=DarkCyan
 highlight SignColumn guibg=#101020
 highlight CursorIM guifg=NONE guibg=Red
 highlight CursorLine guifg=NONE guibg=#505050
-set hlsearch
-nmap <Esc><Esc> :nohlsearch<CR><Esc>
+"set hlsearch
+"nmap <Esc><Esc> :nohlsearch<CR><Esc>
 " 行末の空白文字を可視化
 highlight WhitespaceEOL cterm=underline ctermbg=red guibg=#FF0000
 au BufWinEnter * let w:m1 = matchadd("WhitespaceEOL", ' +$')
