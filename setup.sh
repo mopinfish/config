@@ -1,4 +1,15 @@
 #! /bin/zsh
+rm /home/${USER}/.bashrc
+rm /home/${USER}/.zshrc
+rm -rf /home/${USER}/.zsh
+rm /home/${USER}/.vimrc
+rm -rf /home/${USER}/.vim
+rm -rf /home/${USER}/.vim_tmp
+rm -rf /home/${USER}/.vim/bundle/vundle
+rm /home/${USER}/.screenrc
+rm /home/${USER}/.tmux.conf
+rm /home/${USER}/.gitconfig
+rm /home/${USER}/.gitignore
 
 # bash config
 ln -s /home/${USER}/config/bashrc /home/${USER}/.bashrc
