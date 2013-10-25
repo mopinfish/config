@@ -5,16 +5,16 @@ set ttytype=builtin_linux
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
-Bundle 'unite.vim'
-Bundle 'unite-locate'
-Bundle 'unite-yarm'
-Bundle 'unite-gem'
-Bundle 'unite-font'
-Bundle 'unite-colorscheme'
-Bundle 'quickrun'
+"set rtp+=~/.vim/bundle/vundle/
+"call vundle#rc()
+"
+"Bundle 'unite.vim'
+"Bundle 'unite-locate'
+"Bundle 'unite-yarm'
+"Bundle 'unite-gem'
+"Bundle 'unite-font'
+"Bundle 'unite-colorscheme'
+"Bundle 'quickrun'
 "Bundle 'thinca/vim-quickrun'
 "Bundle 'unite-qf'
 
