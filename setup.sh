@@ -6,6 +6,8 @@ rm /home/${USER}/.vimrc
 rm -rf /home/${USER}/.vim
 rm -rf /home/${USER}/.vim_tmp
 rm -rf /home/${USER}/.vim/bundle/vundle
+rm -rf /home/${USER}/.vim/bundle/neobundle.vim
+rm -rf /home/${USER}/.vim/bundle/vimproc
 rm /home/${USER}/.screenrc
 rm /home/${USER}/.tmux.conf
 rm /home/${USER}/.gitconfig
@@ -22,6 +24,8 @@ ln -s /home/${USER}/config/vimrc /home/${USER}/.vimrc
 ln -s /home/${USER}/config/vim /home/${USER}/.vim
 ln -s /home/${USER}/config/vim_tmp /home/${USER}/.vim_tmp
 git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
+git clone https://github.com/Shougo/vimproc ~/.vim/bundle/vimproc
 
 # screen config
 ln -s /home/${USER}/config/screenrc /home/${USER}/.screenrc

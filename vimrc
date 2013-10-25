@@ -31,6 +31,32 @@ set ts=4
 set expandtab
 set shiftwidth=4
 
+"NeoBundle Configs
+filetype off 
+
+if has('vim_starting')
+  set runtimepath+=~/.vim/bundle/neobundle.vim
+  call neobundle#rc(expand('~/.vim/.bundle'))
+endif
+
+NeoBundle 'git://github.com/Shougo/neobundle.vim.git'
+"NeoBundle 'git://github.com/Shougo/neocomplete.vim'
+NeoBundle 'git://github.com/Shougo/neocomplcache.git'
+NeoBundle 'git://github.com/Shougo/vimproc.git'
+NeoBundle 'git://github.com/Shougo/unite.vim.git'
+NeoBundle 'git://github.com/mattn/zencoding-vim.git'
+NeoBundle 'git://github.com/thinca/vim-quickrun.git'
+NeoBundle 'git://github.com/thinca/vim-ref.git'
+
+"NeoComplcache use
+let g:neocomplcache_enable_at_startup = 1
+" <TAB>: completion.
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+
+filetype plugin on
+filetype indent on
+
+
 
 filetype plugin indent on
 " edit
@@ -48,18 +74,30 @@ set fileformat=unix
 set mouse=a
 " screen対応
 set ttymouse=xterm2
+" 一時ファイル保存場所
+set backupdir=~/.vim_tmp/vim_bk
+set directory=~/.vim_tmp/vim_swp
 
 " tab
 "-----------------------------------------------------------
-au FileType php  set ts=4 sw=4 softtabstop=4 expandtab
+au FileType php set ts=4 sw=4 softtabstop=4 expandtab
 au FileType html set ts=4 sw=4 softtabstop=4 expandtab
 au FileType js set ts=4 sw=4 softtabstop=4 expandtab
+au FileType css set ts=4 sw=4 softtabstop=4 expandtab
+au FileType ruby set ts=2 sw=2 softtabstop=2 expandtab
+au FileType scala set ts=2 sw=2 softtabstop=2 expandtab
 au! BufNewFile,BufRead *.as :set filetype=actionscript
 au! BufNewFile,BufRead *.thtml :set filetype=html
+au! BufNewFile,BufRead *.html.twig :set filetype=html
 au! BufNewFile,BufRead *.phtml :set filetype=html
 
 set smarttab
 inoremap <C-Tab> <C-V><Tab>
+
+" <TAB>: completion.
+let g:neocomplcache_enable_at_startup = 1
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+
 
 " utf-8
 "-----------------------------------------------------------
@@ -79,11 +117,14 @@ highlight lastSpaces term=underline ctermbg=yellow guibg=yellow
 au BufRead,BufNewFile *.ctp set filetype=php
 set background=light
 
-highlight String     ctermfg=brown guifg=Orange cterm=none gui=none
+highlight String ctermfg=brown guifg=Orange cterm=none gui=none
+highlight Search guifg=green guibg=NONE
 highlight MatchParen guifg=Yellow guibg=DarkCyan
 highlight SignColumn guibg=#101020
-highlight CursorIM   guifg=NONE guibg=Red
+highlight CursorIM guifg=NONE guibg=Red
 highlight CursorLine guifg=NONE guibg=#505050
+set hlsearch
+nmap <Esc><Esc> :nohlsearch<CR><Esc>
 " 行末の空白文字を可視化
 highlight WhitespaceEOL cterm=underline ctermbg=red guibg=#FF0000
 au BufWinEnter * let w:m1 = matchadd("WhitespaceEOL", ' +$')
@@ -97,14 +138,11 @@ au! BufNewFile,BufRead *.html.twig :set filetype=twig
 au! BufNewFile,BufRead *.tpl.html :set filetype=smarty
 
 
-
 "coloshceme
 "----------------------------------------------------------
 set t_Co=256
 colorscheme peachpuff
-"colorscheme xoria256
 "colorscheme zenburn
-
 "
 "----------------------------------------------------------
 set nocompatible          " We're running Vim, not Vi!
@@ -114,6 +152,7 @@ filetype plugin indent on " Enable filetype-specific indenting and plugins
 "__________________________________________________________
 nmap <silent> <F11> :NERDTreeToggle<CR>
 nmap <silent> <F10> :NERDTree<CR>
+let g:mapleader = '@'
 
 " 引数なしでvimを起動させた時はNERDTreeを開く
 ""autocmd vimenter * if !argc() | call s:OnlyTree() | endif
