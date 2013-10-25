@@ -1,5 +1,5 @@
 # 特定のファイルを無視する
-.zsh_history
+.zshhistory
 
 # ファイル名が「.cache」で終わるファイルを無視する場合
 *.cache
