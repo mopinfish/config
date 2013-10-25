@@ -19,7 +19,7 @@ ln -s /home/${USER}/config/bashrc /home/${USER}/.bashrc
 # zshell config
 ln -s /home/${USER}/config/zshrc /home/${USER}/.zshrc
 ln -s /home/${USER}/config/zsh /home/${USER}/.zsh
-ln -s config-files/.zsh_history ../.zsh_history
+ln -s config-files/zsh_history ../.zsh_history
 
 # vim config
 ln -s /home/${USER}/config/vimrc /home/${USER}/.vimrc
