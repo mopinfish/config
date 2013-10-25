@@ -10,6 +10,7 @@ ln -s /home/${USER}/config/zsh /home/${USER}/.zsh
 ln -s /home/${USER}/config/vimrc /home/${USER}/.vimrc
 ln -s /home/${USER}/config/vim /home/${USER}/.vim
 ln -s /home/${USER}/config/vim_tmp /home/${USER}/.vim_tmp
+git clone http://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 
 # screen config
 ln -s /home/${USER}/config/screenrc /home/${USER}/.screenrc
