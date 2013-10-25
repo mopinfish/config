@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/mnt/svn/unit/otsukano/php_include/Mchintai/Application/Views/Scripts/SmartPhone/search/.svn'
+let g:netrw_dirhist_2='/home/otsukano/.vim'
+let g:netrw_dirhist_3='/web/homes/vendor.2.0.4/doctrine/lib/Doctrine/ORM/Event'
+let g:netrw_dirhist_4='/web/homes/unit/otsukano/php_include'

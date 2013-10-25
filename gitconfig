@@ -1,0 +1,9 @@
+[core]
+    pager = lv -c
+    editor = vim
+    excludesfile = /home/otsukano/.gitignore
+[color]
+	branch = always
+	diff = always
+	interactive = always
+	status = always

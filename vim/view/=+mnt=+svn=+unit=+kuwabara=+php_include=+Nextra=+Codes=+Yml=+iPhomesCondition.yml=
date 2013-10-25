@@ -1,0 +1,283 @@
+let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
+argglobal
+setlocal keymap=
+setlocal noarabic
+setlocal noautoindent
+setlocal balloonexpr=
+setlocal nobinary
+setlocal bufhidden=
+setlocal buflisted
+setlocal buftype=
+setlocal nocindent
+setlocal cinkeys=0{,0},0),:,0#,!^F,o,O,e
+setlocal cinoptions=
+setlocal cinwords=if,else,while,do,for,switch
+setlocal comments=:#
+setlocal commentstring=#\ %s
+setlocal complete=.,w,b,u,t,i
+setlocal completefunc=
+setlocal nocopyindent
+setlocal nocursorcolumn
+setlocal nocursorline
+setlocal define=
+setlocal dictionary=
+setlocal nodiff
+setlocal equalprg=
+setlocal errorformat=
+setlocal expandtab
+if &filetype != 'yaml'
+setlocal filetype=yaml
+endif
+setlocal foldcolumn=0
+setlocal foldenable
+setlocal foldexpr=0
+setlocal foldignore=#
+setlocal foldlevel=0
+setlocal foldmarker={{{,}}}
+setlocal foldmethod=manual
+setlocal foldminlines=1
+setlocal foldnestmax=20
+setlocal foldtext=foldtext()
+setlocal formatexpr=
+setlocal formatoptions=croql
+setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
+setlocal grepprg=
+setlocal iminsert=0
+setlocal imsearch=-1
+setlocal include=
+setlocal includeexpr=
+setlocal indentexpr=
+setlocal indentkeys=0{,0},:,0#,!^F,o,O,e
+setlocal noinfercase
+setlocal iskeyword=@,48-57,_,192-255
+setlocal keywordprg=
+setlocal nolinebreak
+setlocal nolisp
+setlocal nolist
+setlocal makeprg=
+setlocal matchpairs=(:),{:},[:]
+setlocal modeline
+setlocal modifiable
+setlocal nrformats=octal,hex
+setlocal number
+setlocal numberwidth=4
+setlocal omnifunc=
+setlocal path=
+setlocal nopreserveindent
+setlocal nopreviewwindow
+setlocal quoteescape=\\
+setlocal noreadonly
+setlocal norightleft
+setlocal rightleftcmd=search
+setlocal noscrollbind
+setlocal shiftwidth=4
+setlocal noshortname
+setlocal nosmartindent
+setlocal softtabstop=0
+setlocal nospell
+setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
+setlocal spellfile=
+setlocal spelllang=en
+setlocal statusline=
+setlocal suffixesadd=
+setlocal swapfile
+setlocal synmaxcol=3000
+if &syntax != 'yaml'
+setlocal syntax=yaml
+endif
+setlocal tabstop=4
+setlocal tags=
+setlocal textwidth=0
+setlocal thesaurus=
+setlocal nowinfixheight
+setlocal nowinfixwidth
+setlocal wrap
+setlocal wrapmargin=0
+silent! normal! zE
+12,27fold
+28,84fold
+85,89fold
+90,94fold
+95,99fold
+100,126fold
+127,169fold
+170,182fold
+183,193fold
+194,206fold
+207,211fold
+212,216fold
+217,253fold
+11,253fold
+255,260fold
+261,293fold
+294,326fold
+327,371fold
+372,384fold
+385,395fold
+396,408fold
+409,413fold
+414,418fold
+419,423fold
+424,428fold
+429,473fold
+254,473fold
+475,480fold
+481,513fold
+514,546fold
+547,591fold
+592,624fold
+625,637fold
+638,640fold
+641,651fold
+652,664fold
+665,669fold
+670,674fold
+675,679fold
+680,696fold
+474,696fold
+698,703fold
+704,714fold
+715,747fold
+748,766fold
+767,777fold
+778,790fold
+791,899fold
+697,899fold
+901,906fold
+907,917fold
+918,950fold
+951,969fold
+970,980fold
+981,993fold
+900,993fold
+11
+normal zo
+12
+normal zc
+28
+normal zc
+85
+normal zc
+90
+normal zc
+95
+normal zc
+100
+normal zc
+127
+normal zc
+170
+normal zc
+183
+normal zc
+194
+normal zc
+207
+normal zc
+212
+normal zc
+217
+normal zc
+11
+normal zo
+254
+normal zo
+255
+normal zc
+261
+normal zc
+294
+normal zc
+327
+normal zc
+372
+normal zc
+385
+normal zc
+396
+normal zc
+409
+normal zc
+414
+normal zc
+419
+normal zc
+424
+normal zc
+429
+normal zc
+254
+normal zo
+474
+normal zo
+475
+normal zc
+481
+normal zc
+514
+normal zc
+547
+normal zc
+592
+normal zc
+625
+normal zc
+638
+normal zc
+641
+normal zc
+652
+normal zc
+665
+normal zc
+670
+normal zc
+675
+normal zc
+680
+normal zc
+474
+normal zo
+697
+normal zo
+698
+normal zc
+704
+normal zc
+715
+normal zc
+748
+normal zc
+767
+normal zc
+778
+normal zc
+791
+normal zc
+697
+normal zo
+900
+normal zo
+901
+normal zc
+907
+normal zc
+918
+normal zc
+951
+normal zc
+970
+normal zc
+981
+normal zc
+900
+normal zo
+let s:l = 11 - ((10 * winheight(0) + 31) / 63)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+11
+normal! 0
+let &so = s:so_save | let &siso = s:siso_save
+doautoall SessionLoadPost
+" vim: set ft=vim :

@@ -1,0 +1,113 @@
+# screenrc
+
+escape ^aa
+vbell off
+startup_message off
+defutf8 on
+autodetach on
+defscrollback 10000
+msgwait 0
+
+# 256color
+attrcolor b ".I" # Use bright colors for bold text
+termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
+defbce on
+
+#status line
+hardstatus alwayslastline "%{= Kw}: %-w%{=b bw}[%n %t]%{-}%+w"
+
+# change message, window split line color
+# b : blue
+sorendition "+rb .b"
+
+##################
+# keybindings
+##################
+
+#putty bindings
+bindkey "^[[C" next
+bindkey "^[[D" prev
+termcapinfo xterm "ks=\E[?1l\E:ku=\E[A:kd=\E[B:kl=\E[D:kr=\E[C:kh=\E[5~:kH=\E[F"
+
+
+#remove some stupid / dangerous key bindings
+#detach
+bind d
+bind ^d
+bind D
+bind ^D
+#kill
+bind k
+bind ^k
+#quit
+bind \\
+bind ^\
+#vbell
+bind ^g
+#flow control
+defflow off
+bind f
+bind ^f
+#xon
+bind q
+bind ^q
+
+# Make them better
+bind D detach
+bind ^D detach
+bind K kill
+
+#select 0
+bind h select 0
+bind ^h select 0
+
+#create a new window
+bind e screen
+bind ^e screen
+
+#copy/paste
+bind x copy
+bind ^x copy
+bind v paste .
+bind ^v paste .
+
+#change window title
+bind i eval 'title ""' title
+bind ^i eval 'title ""' title
+
+#split window
+bind s eval split focus "select 0"
+bind ^s eval split focus "select 0"
+
+#move current window
+bind j focus down
+bind ^j focus down
+bind k focus up
+bind ^k focus up
+
+#resize
+bind r eval 'command -c resize'
+bind ^r eval 'command -c resize'
+
+bind + eval 'resize +1' 'command -c resize'
+bind - eval 'resize -1' 'command -c resize'
+bind . eval 'resize ='
+bind ' ' eval 'resize max'
+
+bind -c resize + eval 'resize +1' 'command -c resize'
+bind -c resize - eval 'resize -1' 'command -c resize'
+bind -c resize . eval 'resize ='
+bind -c resize ' ' eval 'resize max'
+
+#close current window
+bind c remove
+bind ^c remove
+
+#close all other windows
+bind o only
+bind ^o only
+
+#copymode keybindings
+markkeys ^U=K:^D=J:' '=v=y
+
+# vim:set ft=screen:
