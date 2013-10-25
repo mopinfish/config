@@ -18,9 +18,44 @@ setopt prompt_subst
 ## ビープ音ならさない
 setopt nobeep
 
+PATH="$PATH":/usr/local/bin/bin
+export PATH
+#export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
+export LD_LIBRARY_PATH=/usr/local/lib
+export PATH=/usr/local/haskell/ghc/6.12.3/bin:$PATH
+# java path
+export JAVA_HOME=/usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64
+export PATH=$PATH:$JAVA_HOME/bin
+# scala
+export SCALA_HOME=/usr/local/scala-2.7.7.final
+export PATH=$PATH:$SCALA_HOME/bin
+# maven
+export MAVEN_HOME=/usr/local/apache-maven-2.2.1
+export PATH=$PATH:$MAVEN_HOME/bin
 
 #allow tab completion in the middle of a word
 setopt COMPLETE_IN_WORD
+
+[[ -s "/usr/local/rvm/scripts/rvm" ]] && source "/usr/local/rvm/scripts/rvm"
+
+# nvm用の設定
+setopt nonomatch
+#source ${HOME}/.nvm/nvm.sh
+source /usr/local/nvm/nvm.sh
+nvm use "v0.6.17"
+#export NODE_PATH=~/.nvm/v0.6.17/lib/node_modules
+export NODE_PATH=~/usr/local/nvm/v0.6.17/lib/node_modules
+
+#
+# alias設定
+#
+
+# 基本的なこと
+alias la='ls -AF'
+alias ll='ls -l'
+alias df="df -h"
+alias du="du -h"
+alias shasum="sha1sum"
 
 ## keep background processes at full speed
 #setopt NOBGNICE

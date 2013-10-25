@@ -2,6 +2,7 @@
 rm /home/${USER}/.bashrc
 rm /home/${USER}/.zshrc
 rm -rf /home/${USER}/.zsh
+rm -rf ../.zsh_history
 rm /home/${USER}/.vimrc
 rm -rf /home/${USER}/.vim
 rm -rf /home/${USER}/.vim_tmp
@@ -18,6 +19,7 @@ ln -s /home/${USER}/config/bashrc /home/${USER}/.bashrc
 # zshell config
 ln -s /home/${USER}/config/zshrc /home/${USER}/.zshrc
 ln -s /home/${USER}/config/zsh /home/${USER}/.zsh
+ln -s config-files/.zsh_history ../.zsh_history
 
 # vim config
 ln -s /home/${USER}/config/vimrc /home/${USER}/.vimrc
