@@ -13,13 +13,15 @@ rm /home/${USER}/.screenrc
 rm /home/${USER}/.tmux.conf
 rm /home/${USER}/.gitconfig
 rm /home/${USER}/.gitignore
+mkdir /home/${USER}/config/vim_tmp/vim_bk
+mkdir /home/${USER}/config/vim_tmp/vim_swp
 
 # bash config
 ln -s /home/${USER}/config/bashrc /home/${USER}/.bashrc
 # zshell config
 ln -s /home/${USER}/config/zshrc /home/${USER}/.zshrc
 ln -s /home/${USER}/config/zsh /home/${USER}/.zsh
-ln -s config-files/zsh_history ../.zsh_history
+ln -s config-files/zsh_history /home/${USER}/.zsh_history
 
 # vim config
 ln -s /home/${USER}/config/vimrc /home/${USER}/.vimrc
