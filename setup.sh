@@ -1,39 +1,40 @@
 #! /bin/zsh
-rm /home/${USER}/.bashrc
-rm /home/${USER}/.zshrc
-rm -rf /home/${USER}/.zsh
-rm /home/${USER}/.vimrc
-rm -rf /home/${USER}/.vim
-rm -rf /home/${USER}/.vim_tmp
-rm -rf /home/${USER}/.vim/bundle/vundle
-rm -rf /home/${USER}/.vim/bundle/neobundle.vim
-rm -rf /home/${USER}/.vim/bundle/vimproc
-rm /home/${USER}/.screenrc
-rm /home/${USER}/.tmux.conf
-rm /home/${USER}/.gitconfig
-rm /home/${USER}/.gitignore
-mkdir /home/${USER}/config/vim_tmp/vim_bk
-mkdir /home/${USER}/config/vim_tmp/vim_swp
+
+rm ~/.bashrc
+rm ~/.zshrc
+rm -rf ~/.zsh
+rm ~/.vimrc
+rm -rf ~/.vim
+rm -rf ~/.vim_tmp
+rm -rf ~/.vim/bundle/vundle
+rm -rf ~/.vim/bundle/neobundle.vim
+rm -rf ~/.vim/bundle/vimproc
+rm ~/.screenrc
+rm ~/.tmux.conf
+rm ~/.gitconfig
+rm ~/.gitignore
+mkdir ~/config/vim_tmp/vim_bk
+mkdir ~/config/vim_tmp/vim_swp
 
 # bash config
-ln -s /home/${USER}/config/bashrc /home/${USER}/.bashrc
+ln -s ~/config/bashrc ~/.bashrc
 # zshell config
-ln -s /home/${USER}/config/zshrc /home/${USER}/.zshrc
-ln -s /home/${USER}/config/zsh /home/${USER}/.zsh
+ln -s ~/config/zshrc ~/.zshrc
+ln -s ~/config/zsh ~/.zsh
 
 # vim config
-ln -s /home/${USER}/config/vimrc /home/${USER}/.vimrc
-ln -s /home/${USER}/config/vim /home/${USER}/.vim
-ln -s /home/${USER}/config/vim_tmp /home/${USER}/.vim_tmp
+ln -s ~/config/vimrc ~/.vimrc
+ln -s ~/config/vim ~/.vim
+ln -s ~/config/vim_tmp ~/.vim_tmp
 #git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
 git clone https://github.com/Shougo/vimproc ~/.vim/bundle/vimproc
 
 # screen config
-ln -s /home/${USER}/config/screenrc /home/${USER}/.screenrc
+ln -s ~/config/screenrc ~/.screenrc
 # tmux config
-ln -s /home/${USER}/config/tmux.conf /home/${USER}/.tmux.conf
+ln -s ~/config/tmux.conf ~/.tmux.conf
 
 # git config
-ln -s /home/${USER}/config/gitconfig /home/${USER}/.gitconfig
-ln -s /home/${USER}/config/gitignore /home/${USER}/.gitignore
+ln -s ~/config/gitconfig ~/.gitconfig
+ln -s ~/config/gitignore ~/.gitignore
