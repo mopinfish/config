@@ -20,6 +20,13 @@ setopt nobeep
 
 PATH="$PATH":/usr/local/bin/bin
 export PATH
+# mac用の設定
+export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+export MANPATH=/opt/local/man:$MANPATH
+export PATH=/usr/local/sbin:/opt/local/sbin$PATH
+export PATH=/usr/local/bin:/opt/local/bin:$PATH
+export PATH=/usr/local/share/python:$PATH:/Applications/eclipse/android-sdk-mac_x86/tools
+export PATH="$(brew --prefix)/bin:/usr/local/Cellar/php54/5.4.21/bin:$PATH"
 #export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
 export LD_LIBRARY_PATH=/usr/local/lib
 export PATH=/usr/local/haskell/ghc/6.12.3/bin:$PATH
