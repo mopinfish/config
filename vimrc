@@ -5,19 +5,6 @@ set ttytype=builtin_linux
 set nocompatible
 filetype off
 
-"set rtp+=~/.vim/bundle/vundle/
-"call vundle#rc()
-"
-"Bundle 'unite.vim'
-"Bundle 'unite-locate'
-"Bundle 'unite-yarm'
-"Bundle 'unite-gem'
-"Bundle 'unite-font'
-"Bundle 'unite-colorscheme'
-"Bundle 'quickrun'
-"Bundle 'thinca/vim-quickrun'
-"Bundle 'unite-qf'
-
 "一時ファイルの保存場所指定
 set backupdir=~/.vim_tmp/vim_bk
 set directory=~/.vim_tmp/vim_swp
@@ -39,25 +26,32 @@ if has('vim_starting')
   call neobundle#rc(expand('~/.vim/.bundle'))
 endif
 
-NeoBundle 'git://github.com/Shougo/neobundle.vim.git'
-"NeoBundle 'git://github.com/Shougo/neocomplete.vim'
-NeoBundle 'git://github.com/Shougo/neocomplcache.git'
-NeoBundle 'git://github.com/Shougo/vimproc.git'
-NeoBundle 'git://github.com/Shougo/unite.vim.git'
-NeoBundle 'git://github.com/mattn/zencoding-vim.git'
-NeoBundle 'git://github.com/thinca/vim-quickrun.git'
-NeoBundle 'git://github.com/thinca/vim-ref.git'
+NeoBundle 'https://github.com/Shougo/neobundle.vim.git'
+NeoBundle 'https://github.com/Shougo/neocomplcache.git'
+NeoBundle 'https://github.com/Shougo/vimproc.git'
+NeoBundle 'https://github.com/Shougo/unite.vim.git'
+NeoBundle 'https://github.com/mattn/zencoding-vim.git'
+NeoBundle 'thinca/vim-ambicmd'
+NeoBundle 'thinca/vim-quickrun'
+NeoBundle 'https://github.com/rbtnn/vimconsole.vim.git'
+NeoBundle 'https://github.com/thinca/vim-ref.git'
+
+"QucikRun config
+" 垂直分割にする
+ let g:quickrun_config={'*': {'split': 'vertical'}}
 
 "NeoComplcache use
 let g:neocomplcache_enable_at_startup = 1
 " <TAB>: completion.
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 
+"ZenCodingのキーバインド変更
+"let g:user_zen_expandabbr_key = '<C-e>'
+imap <nul> <c-y>,
+let g:user_zen_expandaddr_key='<Nul>'
+
 filetype plugin on
 filetype indent on
-
-
-
 filetype plugin indent on
 " edit
 "-----------------------------------------------------------
