@@ -19,14 +19,7 @@ setopt prompt_subst
 setopt nobeep
 
 PATH="$PATH":/usr/local/bin/bin
-export PATH
-# mac用の設定
-export PATH=/opt/local/bin:/opt/local/sbin:$PATH
-export MANPATH=/opt/local/man:$MANPATH
-export PATH=/usr/local/sbin:/opt/local/sbin$PATH
-export PATH=/usr/local/bin:/opt/local/bin:$PATH
-export PATH=/usr/local/share/python:$PATH:/Applications/eclipse/android-sdk-mac_x86/tools
-export PATH="$(brew --prefix)/bin:/usr/local/Cellar/php54/5.4.21/bin:$PATH"
+# export PATH=/usr/local/bin/bin
 #export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
 export LD_LIBRARY_PATH=/usr/local/lib
 export PATH=/usr/local/haskell/ghc/6.12.3/bin:$PATH
@@ -40,7 +33,17 @@ export PATH=$PATH:$SCALA_HOME/bin
 export MAVEN_HOME=/usr/local/apache-maven-2.2.1
 export PATH=$PATH:$MAVEN_HOME/bin
 # ruby
-export RUBYLIB=/app/homes/unit/$USER/NextCore/lib
+export RUBYLIB=/app/homes/unit/otsukano/NextCore/lib
+# mac用の設定
+if brew > /dev/null 2>&1; then
+    export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+    export MANPATH=/opt/local/man:$MANPATH
+    export PATH=/usr/local/sbin:/opt/local/sbin$PATH
+    export PATH=/usr/local/bin:/opt/local/bin:$PATH
+    export PATH=/usr/local/share/python:$PATH:/Applications/eclipse/android-sdk-mac_x86/tools
+    export PATH="$(brew --prefix)/bin:/usr/local/Cellar/php54/5.4.21/bin:$PATH"
+    echo '[command] brew found'
+fi
 
 #allow tab completion in the middle of a word
 setopt COMPLETE_IN_WORD
@@ -48,12 +51,13 @@ setopt COMPLETE_IN_WORD
 [[ -s "/usr/local/rvm/scripts/rvm" ]] && source "/usr/local/rvm/scripts/rvm"
 
 # nvm用の設定
-setopt nonomatch
-#source ${HOME}/.nvm/nvm.sh
-source /usr/local/nvm/nvm.sh
-nvm use "v0.6.17"
-#export NODE_PATH=~/.nvm/v0.6.17/lib/node_modules
-export NODE_PATH=~/usr/local/nvm/v0.6.17/lib/node_modules
+if [ -e /usr/local/nvm/nvm.sh ]; then
+    setopt nonomatch
+    source /usr/local/nvm/nvm.sh
+    export NODE_PATH=~/usr/local/nvm/v0.6.17/lib/node_modules
+    nvm use "v0.6.17"
+    echo '[file] nvm.sh found'
+fi
 
 #
 # alias設定

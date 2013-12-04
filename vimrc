@@ -35,6 +35,7 @@ NeoBundle 'thinca/vim-ambicmd'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'https://github.com/rbtnn/vimconsole.vim.git'
 NeoBundle 'https://github.com/thinca/vim-ref.git'
+NeoBundle 'Align'
 
 "QucikRun config
 " 垂直分割にする
