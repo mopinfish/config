@@ -39,7 +39,7 @@ NeoBundle 'Align'
 
 "QucikRun config
 " 垂直分割にする
- let g:quickrun_config={'*': {'split': 'vertical'}}
+let g:quickrun_config={'*': {'split': 'vertical'}}
 
 "NeoComplcache use
 let g:neocomplcache_enable_at_startup = 1

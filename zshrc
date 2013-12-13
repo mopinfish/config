@@ -32,8 +32,6 @@ export PATH=$PATH:$SCALA_HOME/bin
 # maven
 export MAVEN_HOME=/usr/local/apache-maven-2.2.1
 export PATH=$PATH:$MAVEN_HOME/bin
-# ruby
-export RUBYLIB=/app/homes/unit/otsukano/NextCore/lib
 # mac用の設定
 if brew > /dev/null 2>&1; then
     export PATH=/opt/local/bin:/opt/local/sbin:$PATH
