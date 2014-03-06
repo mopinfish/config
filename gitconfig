@@ -1,5 +1,5 @@
 [core]
-    pager = lv -c
+#    pager = lv -c
     editor = vim
     excludesfile = /home/otsukano/.gitignore
 [color]
