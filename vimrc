@@ -17,6 +17,9 @@ set clipboard=unnamed
 set ts=4
 set expandtab
 set shiftwidth=4
+set ruler
+set showcmd
+set incsearch
 
 "NeoBundle Configs
 filetype off 
@@ -28,12 +31,12 @@ endif
 
 NeoBundle 'https://github.com/Shougo/neobundle.vim.git'
 NeoBundle 'https://github.com/Shougo/neocomplcache.git'
-NeoBundle 'https://github.com/Shougo/vimproc.git'
+"NeoBundle 'https://github.com/Shougo/vimproc.git'
 NeoBundle 'https://github.com/Shougo/unite.vim.git'
 NeoBundle 'https://github.com/mattn/zencoding-vim.git'
 NeoBundle 'thinca/vim-ambicmd'
 NeoBundle 'thinca/vim-quickrun'
-NeoBundle 'https://github.com/rbtnn/vimconsole.vim.git'
+"NeoBundle 'https://github.com/rbtnn/vimconsole.vim.git'
 NeoBundle 'https://github.com/thinca/vim-ref.git'
 NeoBundle 'Align'
 NeoBundle 'https://github.com/tpope/vim-fugitive'

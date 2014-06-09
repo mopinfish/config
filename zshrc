@@ -66,6 +66,7 @@ alias ll='ls -l'
 alias df="df -h"
 alias du="du -h"
 alias shasum="sha1sum"
+alias vim='/usr/local/vim-7.3/bin/vim'
 
 ## keep background processes at full speed
 #setopt NOBGNICE
