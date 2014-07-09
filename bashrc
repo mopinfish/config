@@ -16,7 +16,9 @@ if [ -f ~/.git-completion.bash ]; then
 fi
 
 # nvm
-source ${HOME}/.node/nvm.sh
+if [ -f ${HOME}/.node/nvm.sh ]; then
+  source ${HOME}/.node/nvm.sh
+fi
 # User specific aliases and functions
 
 alias ls='ls --color=tty'
