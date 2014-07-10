@@ -49,13 +49,12 @@ setopt COMPLETE_IN_WORD
 [[ -s "/usr/local/rvm/scripts/rvm" ]] && source "/usr/local/rvm/scripts/rvm"
 
 # nvm用の設定
-if [ -e /usr/local/nvm/nvm.sh ]; then
-    setopt nonomatch
-    source /usr/local/nvm/nvm.sh
-    export NODE_PATH=~/usr/local/nvm/v0.6.17/lib/node_modules
-    nvm use "v0.6.17"
-    echo '[file] nvm.sh found'
-fi
+setopt nonomatch
+#source ${HOME}/.nvm/nvm.sh
+source /usr/local/nvm/nvm.sh
+nvm use "v0.10.13"
+#export NODE_PATH=~/.nvm/v0.6.17/lib/node_modules
+export NODE_PATH=~/usr/local/nvm/v0.6.17/lib/node_modules
 
 #
 # alias設定
