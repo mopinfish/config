@@ -48,14 +48,6 @@ setopt COMPLETE_IN_WORD
 
 [[ -s "/usr/local/rvm/scripts/rvm" ]] && source "/usr/local/rvm/scripts/rvm"
 
-# nvm用の設定
-setopt nonomatch
-#source ${HOME}/.nvm/nvm.sh
-source /usr/local/nvm/nvm.sh
-nvm use "v0.10.13"
-#export NODE_PATH=~/.nvm/v0.6.17/lib/node_modules
-export NODE_PATH=~/usr/local/nvm/v0.6.17/lib/node_modules
-
 #
 # alias設定
 #
@@ -66,7 +58,8 @@ alias ll='ls -l'
 alias df="df -h"
 alias du="du -h"
 alias shasum="sha1sum"
-alias vim='/usr/local/vim-7.3/bin/vim'
+#alias vim='/usr/local/vim-7.3/bin/vim'
+
 
 ## keep background processes at full speed
 #setopt NOBGNICE
@@ -176,3 +169,4 @@ alias gitrev="git diff master..na_mail"
 alias fgrp="find -type d -name '.svn' -prune  -o -type f  -print | xargs grep"
 
 [ -f ~/.zshrc.mine ] && source ~/.zshrc.mine
+export PATH=$HOME/.nodebrew/current/bin:$PATH

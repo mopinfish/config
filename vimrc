@@ -21,15 +21,17 @@ set ruler
 set showcmd
 set incsearch
 
-"NeoBundle Configs
-filetype off 
+
+filetype plugin indent off
 
 if has('vim_starting')
   set runtimepath+=~/.vim/bundle/neobundle.vim
-  call neobundle#rc(expand('~/.vim/.bundle'))
-endif
+  call neobundle#begin(expand('~/.vim/bundle/'))
+  NeoBundleFetch 'Shougo/neobundle.vim'
+  call neobundle#end()
+endif 
 
-NeoBundle 'https://github.com/Shougo/neobundle.vim.git'
+"NeoBundle 'https://github.com/Shougo/neobundle.vim.git'
 NeoBundle 'https://github.com/Shougo/neocomplcache.git'
 "NeoBundle 'https://github.com/Shougo/vimproc.git'
 NeoBundle 'https://github.com/Shougo/unite.vim.git'
@@ -40,6 +42,8 @@ NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'https://github.com/thinca/vim-ref.git'
 NeoBundle 'Align'
 NeoBundle 'https://github.com/tpope/vim-fugitive'
+NeoBundle 'Shougo/neosnippet.vim'
+
 
 "QucikRun config
 " 垂直分割にする

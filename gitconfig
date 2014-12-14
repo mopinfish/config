@@ -1,6 +1,6 @@
 [core]
 #    pager = lv -c
-	editor = vim -c \"set fenc=utf-8\"
+	editor = vi -c \"set fenc=utf-8\"
     excludesfile = /home/otsukano/.gitignore
 [color]
 	branch = always
