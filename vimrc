@@ -24,25 +24,63 @@ set incsearch
 
 filetype plugin indent off
 
-if has('vim_starting')
-  set runtimepath+=~/.vim/bundle/neobundle.vim
-  call neobundle#begin(expand('~/.vim/bundle/'))
-  NeoBundleFetch 'Shougo/neobundle.vim'
-  call neobundle#end()
-endif 
+" Note: Skip initialization for vim-tiny or vim-small.
+if !1 | finish | endif
 
-"NeoBundle 'https://github.com/Shougo/neobundle.vim.git'
-NeoBundle 'https://github.com/Shougo/neocomplcache.git'
-"NeoBundle 'https://github.com/Shougo/vimproc.git'
+if has('vim_starting')
+  if &compatible
+    set nocompatible               " Be iMproved
+  endif
+
+  " Required:
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
+
+" Required:
+call neobundle#begin(expand('~/.vim/bundle/'))
+
+" Let NeoBundle manage NeoBundle
+" Required:
+NeoBundleFetch 'Shougo/neobundle.vim'
+
+" My Bundles here:
+" Refer to |:NeoBundle-examples|.
+" Note: You don't set neobundle setting in .gvimrc!
+if has('lua') && (( v:version == 703 && has('patch885')) || (v:version >= 704))
+  NeoBundle 'Shougo/neocomplete'
+else
+  NeoBundle 'Shougo/neocomplcache'
+endif
+NeoBundle "Shougo/neosnippet"
+NeoBundle "Shougo/neosnippet-snippets"
+NeoBundle "honza/vim-snippets"
+NeoBundle "rcmdnk/vim-octopress-snippets"
+NeoBundle 'https://github.com/Shougo/neobundle.vim.git'
+NeoBundle 'https://github.com/Shougo/vimproc.git'
 NeoBundle 'https://github.com/Shougo/unite.vim.git'
-NeoBundle 'https://github.com/mattn/zencoding-vim.git'
+NeoBundle 'https://github.com/mattn/emmet-vim.git'
 NeoBundle 'thinca/vim-ambicmd'
 NeoBundle 'thinca/vim-quickrun'
-"NeoBundle 'https://github.com/rbtnn/vimconsole.vim.git'
 NeoBundle 'https://github.com/thinca/vim-ref.git'
 NeoBundle 'Align'
 NeoBundle 'https://github.com/tpope/vim-fugitive'
-NeoBundle 'Shougo/neosnippet.vim'
+
+call neobundle#end()
+
+" Required:
+filetype plugin indent on
+
+" If there are uninstalled bundles found on startup,
+" this will conveniently prompt you to install them.
+NeoBundleCheck
+
+"if has('vim_starting')
+"  set runtimepath+=~/.vim/bundle/neobundle.vim
+"  call neobundle#begin(expand('~/.vim/bundle/'))
+"  NeoBundleFetch 'Shougo/neobundle.vim'
+"  call neobundle#end()
+"endif 
+
 
 
 "QucikRun config
