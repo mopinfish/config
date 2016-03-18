@@ -1,5 +1,6 @@
 #! /bin/zsh
 
+cd 
 rm ~/.bashrc
 rm ~/.zshrc
 rm -rf ~/.zsh
@@ -13,8 +14,23 @@ rm ~/.screenrc
 rm ~/.tmux.conf
 rm ~/.gitconfig
 rm ~/.gitignore
-mkdir ~/config/vim_tmp/vim_bk
-mkdir ~/config/vim_tmp/vim_swp
+
+bk_dir="config/vim_tmp/vim_bk"
+swp_dir="config/vim_tmp/vim_swp"
+if [ ! -e ${bk_dir} ]; then
+  mkdir -p ${bk_dir}
+fi
+if [ ! -e ${swp_dir} ]; then
+  mkdir -p ${swp_dir}
+fi
+
+# install vimproc
+proc_lib_dir="config/vim/bundle/vimproc/autoload/vimproc_linux64.so"
+if [ ! -e $proc_lib_dir ]; then
+  cd ~/config/vim/bundle/vimproc/
+  make
+  cd
+fi
 
 # bash config
 ln -s ~/config/bashrc ~/.bashrc
