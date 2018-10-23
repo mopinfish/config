@@ -13,3 +13,6 @@
 	email = otsukanoboru@next-group.jp
 [push]
 	default = simple
+[credential]
+	helper = !aws --region us-east-1 --profile default codecommit credential-helper $@
+	UseHttpPath = true

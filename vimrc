@@ -56,7 +56,7 @@ NeoBundle "Shougo/neosnippet-snippets"
 NeoBundle "honza/vim-snippets"
 NeoBundle "rcmdnk/vim-octopress-snippets"
 NeoBundle 'https://github.com/Shougo/neobundle.vim.git'
-NeoBundle 'https://github.com/Shougo/vimproc.git'
+" NeoBundle 'https://github.com/Shougo/vimproc.git'
 NeoBundle 'https://github.com/Shougo/unite.vim.git'
 NeoBundle 'https://github.com/mattn/emmet-vim.git'
 NeoBundle 'thinca/vim-ambicmd'
@@ -64,6 +64,8 @@ NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'https://github.com/thinca/vim-ref.git'
 NeoBundle 'Align'
 NeoBundle 'https://github.com/tpope/vim-fugitive'
+NeoBundle 'delphinus35/typescript-vim'
+
 
 call neobundle#end()
 
@@ -124,6 +126,7 @@ set directory=~/.vim_tmp/vim_swp
 au FileType php set ts=4 sw=4 softtabstop=4 expandtab
 au FileType html set ts=4 sw=4 softtabstop=4 expandtab
 au FileType js set ts=4 sw=4 softtabstop=4 expandtab
+au FileType ts set ts=2 sw=2 softtabstop=2 expandtab
 au FileType css set ts=4 sw=4 softtabstop=4 expandtab
 au FileType ruby set ts=2 sw=2 softtabstop=2 expandtab
 au FileType scala set ts=2 sw=2 softtabstop=2 expandtab
