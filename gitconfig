@@ -1,18 +1,22 @@
 [core]
 #    pager = lv -c
-	editor = vi -c \"set fenc=utf-8\"
+	editor = vim -c \"set fenc=utf-8\"
     excludesfile = /home/otsukano/.gitignore
+	precomposeunicode = true
+	quotepath = false
 [color]
-	branch = always
-	diff = always
+	branch = auto
+	diff = auto
 	interactive = always
-	status = always
+	status = auto
 [user]
-	name = otsukano
+	name = OtsukaNoboru
 	mail = OtsukaNoboru@next-group.jp
-	email = otsukanoboru@next-group.jp
+	email = mopinfish@gmail.com
 [push]
 	default = simple
+[alias]
+	co = checkout
 [credential]
 	helper = !aws --region us-east-1 --profile default codecommit credential-helper $@
 	UseHttpPath = true

@@ -52,4 +52,15 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
 
 [[ -s "/usr/local/rvm/scripts/rvm" ]] && source "/usr/local/rvm/scripts/rvm"
 
+# setting for nodebrew
 export PATH=$HOME/.nodebrew/current/bin:$PATH
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[ -f /home/otsukano/ws/projects/sandbox/scala-sbt/serverless-scala/node_modules/tabtab/.completions/serverless.bash ] && . /home/otsukano/ws/projects/sandbox/scala-sbt/serverless-scala/node_modules/tabtab/.completions/serverless.bash
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[ -f /home/otsukano/ws/projects/sandbox/scala-sbt/serverless-scala/node_modules/tabtab/.completions/sls.bash ] && . /home/otsukano/ws/projects/sandbox/scala-sbt/serverless-scala/node_modules/tabtab/.completions/sls.bash

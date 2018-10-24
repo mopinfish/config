@@ -13,10 +13,16 @@ set directory=~/.vim_tmp/vim_swp
 let g:unite_enable_split_vertically = 1
 
 "edit command
-set clipboard=unnamed
-set ts=4
+" ビジュアルモードで選択したテキストが、クリップボードに入るようにする
+" http://nanasi.jp/articles/howto/editing/clipboard.html
+set clipboard=autoselect
+ 
+" 無名レジスタに入るデータを、*レジスタにも入れる。
+set clipboard+=unnamed
+set clipboard+=unnamedplus
+set ts=2
 set expandtab
-set shiftwidth=4
+set shiftwidth=2
 set ruler
 set showcmd
 set incsearch
@@ -65,7 +71,15 @@ NeoBundle 'https://github.com/thinca/vim-ref.git'
 NeoBundle 'Align'
 NeoBundle 'https://github.com/tpope/vim-fugitive'
 NeoBundle 'delphinus35/typescript-vim'
-
+" scala用syntax highlight
+NeoBundle 'derekwyatt/vim-scala'
+" TypeScript
+NeoBundle 'leafgarland/typescript-vim'
+autocmd BufRead,BufNewFile *.ts set filetype=typescript
+" Vue.js
+NeoBundle 'Shougo/context_filetype.vim'
+"NeoBundle 'osyo-manga/vim-precious'
+autocmd BufNewFile,BufRead *.vue set filetype=html
 
 call neobundle#end()
 
@@ -124,16 +138,19 @@ set directory=~/.vim_tmp/vim_swp
 " tab
 "-----------------------------------------------------------
 au FileType php set ts=4 sw=4 softtabstop=4 expandtab
-au FileType html set ts=4 sw=4 softtabstop=4 expandtab
-au FileType js set ts=4 sw=4 softtabstop=4 expandtab
+au FileType html set ts=2 sw=2 softtabstop=2 expandtab
+au FileType js set ts=2 sw=2 softtabstop=2 expandtab
 au FileType ts set ts=2 sw=2 softtabstop=2 expandtab
 au FileType css set ts=4 sw=4 softtabstop=4 expandtab
 au FileType ruby set ts=2 sw=2 softtabstop=2 expandtab
 au FileType scala set ts=2 sw=2 softtabstop=2 expandtab
+" scalaが拡張子のファイルはファイルタイプをscalaとして読みこむ
+au BufNewFile,BufRead *.scala setf scala
 au! BufNewFile,BufRead *.as :set filetype=actionscript
 au! BufNewFile,BufRead *.thtml :set filetype=html
 au! BufNewFile,BufRead *.html.twig :set filetype=html
 au! BufNewFile,BufRead *.phtml :set filetype=html
+au! BufNewFile,BufRead *.scala :set filetype=scala
 
 set smarttab
 inoremap <C-Tab> <C-V><Tab>
