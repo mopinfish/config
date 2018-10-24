@@ -1,4 +1,4 @@
-#! /bin/zsh
+#! /bin/bash
 
 cd 
 rm ~/.bashrc
@@ -54,3 +54,8 @@ ln -s ~/config/tmux.conf ~/.tmux.conf
 # git config
 ln -s ~/config/gitconfig ~/.gitconfig
 ln -s ~/config/gitignore ~/.gitignore
+
+# setup git-prompt.sh and git-completion.bash 
+if [ -f ~/config/patch_git-completion.sh ]; then
+    ~/config/patch_git-completion.sh
+fi
