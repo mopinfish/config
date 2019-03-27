@@ -79,7 +79,7 @@ autocmd BufRead,BufNewFile *.ts set filetype=typescript
 " Vue.js
 NeoBundle 'Shougo/context_filetype.vim'
 "NeoBundle 'osyo-manga/vim-precious'
-autocmd BufNewFile,BufRead *.vue set filetype=html
+autocmd BufNewFile,BufRead *.vue set filetype=typescript
 
 call neobundle#end()
 
@@ -190,6 +190,12 @@ highlight CursorLine guifg=NONE guibg=#505050
 highlight WhitespaceEOL cterm=underline ctermbg=red guibg=#FF0000
 au BufWinEnter * let w:m1 = matchadd("WhitespaceEOL", ' +$')
 au WinEnter * let w:m1 = matchadd("WhitespaceEOL", ' +$')
+
+" tail highlight @see https://qiita.com/pollenjp/items/459a08a2cc59485fa08b
+set list
+set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
+hi NonText    ctermbg=None ctermfg=59 guibg=NONE guifg=None
+hi SpecialKey ctermbg=None ctermfg=59 guibg=NONE guifg=None
 
 "twig
 ""set syntax=htmldjango
